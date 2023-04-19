@@ -30,8 +30,7 @@ const Info = () => {
           <a href='#contact' type='button' className='sticky'>
             <img src={btn} className='xl:mr-[9vw] lg:mr-[8vw] md:mr-[4vw] mx-auto mt-12 xl:w-[10vw] lg:w-[15vw] md:w-[12vw] w-[120px]' alt='btn'/>
           </a>
-      </div>
-      
+      </div>      
     </div>
   )
 }
