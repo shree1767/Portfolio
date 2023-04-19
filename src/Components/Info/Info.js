@@ -27,7 +27,7 @@ const Info = () => {
           <img src={img} className='md:pt-0 pt-20 lg:w-[382px] md:w-[200px] w-[240px] items-center justify-center mx-auto' alt='img'/>
       </div>
       <div className='md:absolute md:right-0 items-center justify-center'>
-          <a href='#contact' type='button' className='sticky'>
+          <a href='#contact' className='sticky'>
             <img src={btn} className='xl:mr-[9vw] lg:mr-[8vw] md:mr-[4vw] mx-auto mt-12 xl:w-[10vw] lg:w-[15vw] md:w-[12vw] w-[120px]' alt='btn'/>
           </a>
       </div>      
