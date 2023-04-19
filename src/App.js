@@ -15,13 +15,14 @@ function App() {
   }, []);
   return (
     <div className="App">
+      {/* preloader */}
       {isLoading && (
         <div className='items-center justify-center my-[20vh]'>
         <img
-          className='mx-auto '
+          className='mx-auto md:w-[350px] md:h-[350px] w-[200px] h-[200px]'
           src="/images/loader.gif"
           alt="Loading..."
-          style={{ width: "350px", height: "350px" }}
+          // style={{ width: "350px", height: "350px" }}
         />
         </div>
       )}

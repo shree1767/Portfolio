@@ -20,14 +20,14 @@ const Info = () => {
               <span className='lg:text-[20px] text-[15px]'>RESUME</span>
             </button>
       </div>
-      <div className='md:flex md:space-x-20 px-10 lg:pt-10 pt-20 lg:text-[20px] md:text-[13px] text-[#D8FDF9]'>
+      <div className='md:flex md:space-x-20 px-10 lg:pt-10 pt-20 xl:text-[20px] md:text-[16px] text-[#D8FDF9]'>
           <p className='lg:w-[40vw]'>
            Hey, <br/><br/>This is Shree! Firstly being CSE student who’s into development..I’m a frontend web developer & designer with experience in Html, CSS, Javascript, ReactJS, Tailwind & Bootstrap. <br/><br/>I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!
           </p>
           <img src={img} className='md:pt-0 pt-20 lg:w-[382px] md:w-[200px] w-[240px] items-center justify-center mx-auto' alt='img'/>
       </div>
       <div className='md:absolute md:right-0 items-center justify-center'>
-          <a href='#contact'><img src={btn} className='xl:mr-[9vw] lg:mr-[3vw] md:mr-[4vw] mx-auto mt-12 xl:w-[10vw] lg:w-[15vw] md:w-[12vw] w-[120px]' alt='btn'/></a>
+          <a href='#contact'><img src={btn} className='xl:mr-[9vw] lg:mr-[8vw] md:mr-[4vw] mx-auto mt-12 xl:w-[10vw] lg:w-[15vw] md:w-[12vw] w-[120px]' alt='btn'/></a>
       </div>
       
     </div>
