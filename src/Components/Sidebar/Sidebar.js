@@ -8,7 +8,7 @@ const Sidebar = () => {
    <div class="h-full px-3 py-5 bg-[#181B1C]">
       <ul class="space-y-[13vh] pt-10 font-[600] text-[17px]">
          <li>
-            <a href="#" class="-rotate-90 mt-7 flex items-center p-2 text-white">
+            <a href="#info" class="-rotate-90 mt-7 flex items-center p-2 text-white">
                <span class="">INFO</span>
             </a>
          </li>
