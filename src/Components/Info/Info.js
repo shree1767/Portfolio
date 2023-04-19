@@ -29,6 +29,7 @@ const Info = () => {
       <div className='md:absolute md:right-0 items-center justify-center'>
           <a href='#contact'><img src={btn} className='xl:mr-[9vw] lg:mr-[3vw] md:mr-[4vw] mx-auto mt-12 xl:w-[10vw] lg:w-[15vw] md:w-[12vw] w-[120px]' alt='btn'/></a>
       </div>
+      
     </div>
   )
 }
