@@ -1,15 +1,21 @@
 import React from 'react'
+import { saveAs } from 'file-saver';
 import './Info.css'
 import ico from './assets/ic_outline-file-download.svg'
 import img from './assets/Rectangle 4.svg'
 import btn from './assets/btn.svg'
 const Info = () => {
+  const downloadPDF = () => {
+    const pdfUrl = process.env.PUBLIC_URL + '/resume.pdf';
+    const pdfFileName = 'resume.pdf';
+    saveAs(pdfUrl, pdfFileName);
+  };  
   return (
     <div className='text-white xl:ml-60 md:ml-[15vw] md:mr-8 justify-center sm:mt-20 pb-10' id='info'>
       <div className='lg:pt-5 pt-10 pl-10 lg:text-[25px] text-[20px]'>INTRODUCTION</div>
       <div className='md:inline-flex items-center justify-end'>
           <div className='heading pl-10 lg:text-[70px] md:text-[55px] text-[45px] font-[600]'>KNOW ME.</div> 
-            <button className='flex space-x-1 items-center ml-10 mt-5 md:ml-[22vw] lg:ml-[28vw] xl:ml-[38vw]'>
+            <button onClick={downloadPDF} className='flex space-x-1 items-center ml-10 mt-5 md:ml-[22vw] lg:ml-[28vw] xl:ml-[38vw]'>
               <img src={ico} alt='ico'/>
               <span className='lg:text-[20px] text-[15px]'>RESUME</span>
             </button>
@@ -21,7 +27,7 @@ const Info = () => {
           <img src={img} className='md:pt-0 pt-20 lg:w-[382px] md:w-[200px] w-[240px] items-center justify-center mx-auto' alt='img'/>
       </div>
       <div className='md:absolute md:right-0 items-center justify-center'>
-          <img src={btn} className='xl:mr-[9vw] lg:mr-[3vw] md:mr-[4vw] mx-auto mt-12 xl:w-[10vw] lg:w-[15vw] md:w-[12vw] w-[120px]' alt='btn'/>
+          <a href='#contact'><img src={btn} className='xl:mr-[9vw] lg:mr-[3vw] md:mr-[4vw] mx-auto mt-12 xl:w-[10vw] lg:w-[15vw] md:w-[12vw] w-[120px]' alt='btn'/></a>
       </div>
     </div>
   )
