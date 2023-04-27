@@ -32,7 +32,7 @@ const Info = () => {
               <img src={ico} alt='ico'/>
               <span className='lg:text-[20px] text-[15px]'>RESUME</span>
           </button>
-          <a href='#contact' className='sticky'>
+          <a href='#contact' className=''>
             <img src={btn} className='xl:mr-[9vw] lg:mr-[8vw] md:mr-[4vw] mt-12 xl:w-[10vw] lg:w-[15vw] md:w-[12vw] w-[120px]' alt='btn'/>
           </a>
       </div>
