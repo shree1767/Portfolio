@@ -24,11 +24,11 @@ const Info = () => {
           <p className='lg:w-[40vw]'>
            Hey, <br/><br/>This is Shree! Firstly being CSE student who’s into development..I’m a frontend web developer & designer with experience in Html, CSS, Javascript, ReactJS, Tailwind & Bootstrap. <br/><br/>I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!
           </p>
-          <img src={img} className='md:pt-0 pt-20 lg:w-[382px] md:w-[200px] w-[220px] items-center justify-center mx-auto' alt='img'/>
+          <img src={img} className='md:pt-0 pt-20 lg:w-[382px] md:w-[100px] w-[150px] items-center justify-center mx-auto' alt='img'/>
       </div>
-      <div className='justify-center'>
-      <div className='md:flex-0 grid grid-cols-2 mx-auto space-x-5 md:absolute md:right-0 items-center'>
-          <button onClick={downloadPDF} className='md:hidden block flex space-x-1 items-center ml-10 mt-10 md:ml-[22vw] lg:ml-[28vw] xl:ml-[38vw]'>
+      <div className='mx-10'>
+      <div className='md:flex-0 flex md:absolute md:right-0 justify-between items-center'>
+          <button onClick={downloadPDF} className='md:hidden block flex space-x-1 items-center mt-10 md:ml-[22vw] lg:ml-[28vw] xl:ml-[38vw]'>
               <img src={ico} alt='ico'/>
               <span className='lg:text-[20px] text-[15px]'>RESUME</span>
           </button>
