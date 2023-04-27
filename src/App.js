@@ -26,9 +26,9 @@ function App() {
   return (
     <div className="App">
       {isLoading && (
-        <div className='items-center justify-center md:my-[20vh] my-[30vh]'>
+        <div className='flex h-screen'>
         <img
-          className='mx-auto md:w-[350px] md:h-[350px] w-[200px] h-[200px]'
+          className='m-auto md:w-[350px] md:h-[350px] w-[200px] h-[200px]'
           src="/images/loader.gif"
           alt="Loading..."
         />
