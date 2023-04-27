@@ -4,3 +4,8 @@
 body::-webkit-scrollbar{
     display: none;
   }
+
+  @font-face {
+    font-family: 'Poppins';
+    src: url('https://fonts.google.com/specimen/Poppins') format('truetype'),
+  }
