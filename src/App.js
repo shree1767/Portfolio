@@ -21,27 +21,6 @@ function App() {
       setIsLoading(false);
     }, 2900);
   }, []);
-  
-  //Sidebar on scroll
-  const [showNavbar, setShowNavbar] = useState(false);
-  const secondComponentRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight;
-      const secondComponentPosition = secondComponentRef.current ? secondComponentRef.current.offsetTop : 1;
-      if (scrollPosition > secondComponentPosition) {
-        setShowNavbar(true);
-      } else {
-        setShowNavbar(false);
-      }
-  };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
     <div className="App">
@@ -61,9 +40,9 @@ function App() {
           path='/' 
           element={
           <>
-          {showNavbar && <Sidebar className='anim'/>}
-          <Hero />
-          <Info ref={secondComponentRef}/>
+          <Sidebar className='anim'/>
+          <Hero/>
+          <Info/>
           <Works/>
           <Contact/>
           </>
