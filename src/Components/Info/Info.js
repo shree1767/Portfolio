@@ -15,7 +15,7 @@ const Info = () => {
       <div className='lg:pt-5 pt-10 pl-10 lg:text-[25px] text-[20px]'>INTRODUCTION</div>
       <div className='md:inline-flex items-center justify-end'>
           <div className='heading pl-10 lg:text-[70px] md:text-[55px] text-[45px] font-[600]'>KNOW ME.</div> 
-            <button onClick={downloadPDF} className='md:block hidden flex space-x-1 items-center ml-10 mt-5 md:ml-[22vw] lg:ml-[28vw] xl:ml-[38vw]'>
+            <button onClick={downloadPDF} className='md:flex md:block hidden space-x-1 items-center ml-10 mt-5 md:ml-[22vw] lg:ml-[28vw] xl:ml-[38vw]'>
               <img src={ico} alt='ico'/>
               <span className='lg:text-[20px] text-[15px]'>RESUME</span>
             </button>
@@ -26,7 +26,8 @@ const Info = () => {
           </p>
           <img src={img} className='md:pt-0 pt-20 lg:w-[382px] md:w-[200px] w-[220px] items-center justify-center mx-auto' alt='img'/>
       </div>
-      <div className='md:flex-0 flex space-x-20 mx-3 md:absolute md:right-0 items-center'>
+      <div className='justify-center'>
+      <div className='md:flex-0 grid grid-cols-2 mx-auto space-x-5 md:absolute md:right-0 items-center'>
           <button onClick={downloadPDF} className='md:hidden block flex space-x-1 items-center ml-10 mt-10 md:ml-[22vw] lg:ml-[28vw] xl:ml-[38vw]'>
               <img src={ico} alt='ico'/>
               <span className='lg:text-[20px] text-[15px]'>RESUME</span>
@@ -34,7 +35,8 @@ const Info = () => {
           <a href='#contact' className='sticky'>
             <img src={btn} className='xl:mr-[9vw] lg:mr-[8vw] md:mr-[4vw] mt-12 xl:w-[10vw] lg:w-[15vw] md:w-[12vw] w-[120px]' alt='btn'/>
           </a>
-      </div>      
+      </div>
+      </div>    
     </div>
   )
 }
