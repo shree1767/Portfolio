@@ -21,12 +21,12 @@ function MobileNavbar() {
           </a>
         </li>
         <li>
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#5CA4B2]">
+          <a href="https://github.com/shree1767" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#5CA4B2]">
             <FaGithub size={24} />
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#5CA4B2]">
+          <a href="https://www.linkedin.com/in/shreenidhi1/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#5CA4B2]">
             <FaTwitter size={24} />
           </a>
         </li>
