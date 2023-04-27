@@ -1,6 +1,5 @@
 import './Sidebar.css'
 import React from 'react'
-import {Link} from 'react-router-dom'
 
 const Sidebar = () => {
   return (
@@ -20,7 +19,7 @@ const Sidebar = () => {
             </a>
          </li>
          <li>
-            <a href="#" class="-rotate-90 flex items-center p-2 text-white">
+            <a href="#contact" class="-rotate-90 flex items-center p-2 text-white">
                <span class="flex-1 whitespace-nowrap">CONTACT</span>
             </a>
          </li>
