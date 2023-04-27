@@ -1,10 +1,16 @@
 import './App.css';
 import React, { useState, useEffect,useRef } from "react";
-
+import {Routes,Route} from 'react-router-dom'
+import Hero from './Components/Hero/Hero';
 import Info from './Components/Info/Info';
 import Sidebar from './Components/Sidebar/Sidebar';
+import Sidebar2 from './Components/Sidebar/Sidebar2';
 import Works from './Components/Works/Works';
-import Hero from './Components/Hero/Hero';
+import Webdev from './Components/Workpages/Webdev';
+import UIUX from './Components/Workpages/UIUX';
+import Games from './Components/Workpages/Games';
+import Contact from './Components/Contact/Contact';
+
 function App() {
   //Preloader
   const [isLoading, setIsLoading] = useState(true);
@@ -50,10 +56,47 @@ function App() {
       )}
       {!isLoading && 
       <>
-      {showNavbar && <Sidebar className='anim'/>}
-      <Hero />
-      <Info ref={secondComponentRef}/>
-      <Works/>
+      <Routes>
+        <Route 
+          path='/' 
+          element={
+          <>
+          {showNavbar && <Sidebar className='anim'/>}
+          <Hero />
+          <Info ref={secondComponentRef}/>
+          <Works/>
+          <Contact/>
+          </>
+        }
+        />
+        <Route 
+          path='/Webdev' 
+          element={
+          <>
+            <Sidebar2/>
+            <Webdev/>
+          </>
+        }
+        />
+        <Route 
+          path='/UIUX' 
+          element={
+          <>
+            <Sidebar2/>
+            <UIUX/>
+          </>
+        }
+        />
+        <Route 
+          path='/Games' 
+          element={
+          <>
+            <Sidebar2/>
+            <Games/>
+          </>
+        }
+        />
+      </Routes>
       </>
       }
      

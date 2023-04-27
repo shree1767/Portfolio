@@ -11,7 +11,7 @@ const Info = () => {
     saveAs(pdfUrl, pdfFileName);
   };  
   return (
-    <div className='text-white xl:ml-60 md:ml-[15vw] md:mr-8 justify-center sm:mt-20 pb-10' id='info'>
+    <div className='text-white xl:ml-60 md:ml-[15vw] md:mr-8 justify-center sm:mt-20 md:py-[10vh]' id='info'>
       <div className='lg:pt-5 pt-10 pl-10 lg:text-[25px] text-[20px]'>INTRODUCTION</div>
       <div className='md:inline-flex items-center justify-end'>
           <div className='heading pl-10 lg:text-[70px] md:text-[55px] text-[45px] font-[600]'>KNOW ME.</div> 
