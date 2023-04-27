@@ -26,7 +26,7 @@ const Info = () => {
           </p>
           <img src={img} className='md:pt-0 pt-20 lg:w-[382px] md:w-[200px] w-[220px] items-center justify-center mx-auto' alt='img'/>
       </div>
-      <div className='md:flex-0 flex space-x-20 md:absolute md:right-0 items-center'>
+      <div className='md:flex-0 flex space-x-20 mx-3 md:absolute md:right-0 items-center'>
           <button onClick={downloadPDF} className='md:hidden block flex space-x-1 items-center ml-10 mt-10 md:ml-[22vw] lg:ml-[28vw] xl:ml-[38vw]'>
               <img src={ico} alt='ico'/>
               <span className='lg:text-[20px] text-[15px]'>RESUME</span>
