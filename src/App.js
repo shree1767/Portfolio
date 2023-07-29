@@ -11,7 +11,7 @@ import UIUX from './Components/Workpages/UIUX';
 import Games from './Components/Workpages/Games';
 import Contact from './Components/Contact/Contact';
 import MobileNavbar from './Components/MobileNavbar/MobileNavbar';
-
+import MobileNavbar2 from './Components/MobileNavbar/MobileNavbar2';
 function App() {
   //Preloader
   const [isLoading, setIsLoading] = useState(true);
@@ -42,10 +42,11 @@ function App() {
           element={
           <>
           <Sidebar/>
-          <MobileNavbar/>
+          
           <Hero/>
           <Info/>
           <Works/>
+          <MobileNavbar/>
           <Contact/>
           </>
         }
@@ -55,6 +56,7 @@ function App() {
           element={
           <>
             <Sidebar2/>
+            <MobileNavbar2/>
             <Webdev/>
           </>
         }
@@ -64,6 +66,7 @@ function App() {
           element={
           <>
             <Sidebar2/>
+            <MobileNavbar2/>
             <UIUX/>
           </>
         }
@@ -73,6 +76,7 @@ function App() {
           element={
           <>
             <Sidebar2/>
+            <MobileNavbar2/>
             <Games/>
           </>
         }

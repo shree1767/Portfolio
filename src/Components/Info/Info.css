@@ -1,3 +1,6 @@
 body{
     background-color: #191C1F;
 }
+.button{
+    clip-path: polygon(20% 0%, 0% 50);
+}
