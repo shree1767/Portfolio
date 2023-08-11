@@ -10,22 +10,66 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0);
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: fadeInBackground 0.5s ease-in-out forwards; 
+  }
+  @keyframes fadeInBackground {
+    0% {
+      background-color: rgba(0, 0, 0, 0);
+    }
+    100% {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+  
+
+  /* Define the TV turning on animation */
+  @keyframes tvOnAnimation {
+    0% {
+      transform:scaleY(0)
+    }
+    100% {
+      transform: scaleY(1);
+    }
   }
   
   .modal {
     position: relative;
     background-color: black;
+    box-shadow: 0px 0px 95px #5ca4b298;
     padding: 20px;
-    max-width: 90%;
-    max-height: 90%;
+    width: 30%;
+    max-height: 50%;
     overflow-y: auto;
-    border-radius: 5px;
+    overflow: hidden;
+    animation: tvOnAnimation 0.3s ease-in-out forwards;
   }
-  
+  @media (max-width: 768px) {
+    .modal {
+      width: 80%; 
+      height: 33%;
+    }
+    .modal h2{
+      font-size:15px;
+      margin-bottom: 10px;
+    }
+    .modal p{
+      font-size:5px;
+      margin-bottom: 10px;
+    }
+  }
+
+  @keyframes tvOffAnimation {
+    0% {
+      transform: scaleY(1);
+    }
+    100% {
+      transform: scaleY(0);
+    }
+  }
   .modal h2 {
     font-size: 24px;
     margin-bottom: 10px;

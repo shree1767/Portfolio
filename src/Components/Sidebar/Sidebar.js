@@ -1,14 +1,30 @@
+import { calculateNewValue } from '@testing-library/user-event/dist/utils';
 import './Sidebar.css'
-import React from 'react'
+import React, { useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Sidebar = () => {
+   const navigate = useNavigate();
+   const location = useLocation();
+   useEffect(() => {
+      if (location.pathname === '/') {
+        // Scroll to the #info section for root route ("/")
+        document.getElementById('info','works');
+      } else{
+        // Navigate to root and then scroll to the #info section for other routes
+        setTimeout(() => {
+          document.getElementById('info','works');
+        }, 300); // Adjust the delay as needed
+      }
+    }, [location.pathname, navigate]);
+
   return (
     <>
 <aside id="default-sidebar" class="md:block hidden fixed top-0 left-0 z-40  h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
    <div class="h-full px-3 py-5 bg-[#181B1C]">
       <ul class="space-y-[13vh] pt-10 font-[600] text-[17px]">
          <li>
-            <a href="#info" class="-rotate-90 mt-7 flex items-center p-2 text-white">
+            <a href="#info" class="-rotate-90 mt-7 flex items-center p-2 text-white" >
                <span class="">INFO</span>
             </a>
          </li>

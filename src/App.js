@@ -1,17 +1,13 @@
 import './App.css';
 import React, { useState, useEffect } from "react";
 import {Routes,Route} from 'react-router-dom'
-import Hero from './Components/Hero/Hero';
-import Info from './Components/Info/Info';
 import Sidebar from './Components/Sidebar/Sidebar';
-import Sidebar2 from './Components/Sidebar/Sidebar2';
-import Works from './Components/Works/Works';
 import Webdev from './Components/Workpages/Webdev';
 import UIUX from './Components/Workpages/UIUX';
 import Games from './Components/Workpages/Games';
-import Contact from './Components/Contact/Contact';
 import MobileNavbar from './Components/MobileNavbar/MobileNavbar';
-import MobileNavbar2 from './Components/MobileNavbar/MobileNavbar2';
+import Landing from './Components/Landing/Landing';
+
 function App() {
   //Preloader
   const [isLoading, setIsLoading] = useState(true);
@@ -36,37 +32,25 @@ function App() {
       )}
       {!isLoading && 
       <>
+       <Sidebar/>
+       <MobileNavbar/>
       <Routes>
         <Route 
           path='/' 
           element={
-          <>
-          <Sidebar/>
-          
-          <Hero/>
-          <Info/>
-          <Works/>
-          <MobileNavbar/>
-          <Contact/>
-          </>
+         <Landing/>
         }
         />
         <Route 
           path='/Webdev' 
           element={
-          <>
-            <Sidebar2/>
-            <MobileNavbar2/>
             <Webdev/>
-          </>
         }
         />
         <Route 
           path='/UIUX' 
           element={
           <>
-            <Sidebar2/>
-            <MobileNavbar2/>
             <UIUX/>
           </>
         }
@@ -75,8 +59,6 @@ function App() {
           path='/Games' 
           element={
           <>
-            <Sidebar2/>
-            <MobileNavbar2/>
             <Games/>
           </>
         }
