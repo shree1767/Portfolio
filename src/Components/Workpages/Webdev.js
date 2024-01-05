@@ -47,7 +47,7 @@ const Webdev = () => {
               className="card lg:w-[318px] md:w-[280px] md:h-[190px] lg:h-[208px] w-[250px] h-[150px] justify-center bg-transparent shadow"
               onClick={() => handleCardClick(project)}
             >
-            <img src={project.imgUrl} className='mx-auto'/>
+            <img src={project.imgUrl} className='mx-auto' alt=''/>
             </button>
             <div className="my-4 text-[15px]">{project.title}</div>
           </div>

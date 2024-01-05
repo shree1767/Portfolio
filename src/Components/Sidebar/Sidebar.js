@@ -1,4 +1,3 @@
-import { calculateNewValue } from '@testing-library/user-event/dist/utils';
 import './Sidebar.css'
 import React, { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -6,36 +5,61 @@ import { useNavigate, useLocation } from 'react-router-dom';
 const Sidebar = () => {
    const navigate = useNavigate();
    const location = useLocation();
-   useEffect(() => {
-      if (location.pathname === '/') {
-        // Scroll to the #info section for root route ("/")
-        document.getElementById('info','works');
-      } else{
-        // Navigate to root and then scroll to the #info section for other routes
-        setTimeout(() => {
-          document.getElementById('info','works');
-        }, 300); // Adjust the delay as needed
-      }
-    }, [location.pathname, navigate]);
 
+   useEffect(() => {
+      const scrollToSection = (sectionId) => {
+        const sectionElement = document.getElementById(sectionId);
+        if (sectionElement) {
+          window.scrollTo({
+            top: sectionElement.offsetTop,
+            behavior: 'smooth',
+          });
+        }
+      };
+  
+      const handleLinkClick = (sectionId) => {
+        return (event) => {
+          event.preventDefault();
+          if (location.pathname !== '/') {
+            navigate('/');
+            setTimeout(() => {
+              scrollToSection(sectionId);
+            }, 300);
+          } else {
+            scrollToSection(sectionId);
+          }
+        };
+      };
+  
+      document.getElementById('info-link').addEventListener('click', handleLinkClick('info'));
+      document.getElementById('works-link').addEventListener('click', handleLinkClick('works'));
+      document.getElementById('contact-link').addEventListener('click', handleLinkClick('contact'));
+  
+      return () => {
+        // Cleanup: remove event listeners when component unmounts
+        document.getElementById('info-link').removeEventListener('click', handleLinkClick('info'));
+        document.getElementById('works-link').removeEventListener('click', handleLinkClick('works'));
+        document.getElementById('contact-link').removeEventListener('click', handleLinkClick('contact'));
+      };
+    }, [location.pathname, navigate]);
   return (
     <>
 <aside id="default-sidebar" class="md:block hidden fixed top-0 left-0 z-40  h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
    <div class="h-full px-3 py-5 bg-[#181B1C]">
       <ul class="space-y-[13vh] pt-10 font-[600] text-[17px]">
          <li>
-            <a href="#info" class="-rotate-90 mt-7 flex items-center p-2 text-white" >
+            <a id="info-link" href="#info" class="-rotate-90 mt-7 flex items-center p-2 text-white" >
                <span class="">INFO</span>
             </a>
          </li>
       
          <li>
-            <a href="#works" class="-rotate-90 flex items-center p-2 text-white">
+            <a id="works-link" href="#works" class="-rotate-90 flex items-center p-2 text-white">
                <span class="flex-1 whitespace-nowrap">WORKS</span>
             </a>
          </li>
          <li>
-            <a href="#contact" class="-rotate-90 flex items-center p-2 text-white">
+            <a id="contact-link" href="#contact" class="-rotate-90 flex items-center p-2 text-white">
                <span class="flex-1 whitespace-nowrap">CONTACT</span>
             </a>
          </li>
